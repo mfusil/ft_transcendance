@@ -1,9 +1,9 @@
 body {
-    background-color: rgb(131, 91, 39);
+    background-image: url("../../images/espace.jpg");
 }
 /* le background s'affiche pas je vais câbler */
 
-/* .video-responsive {
+.video-responsive {
     overflow:hidden;
     padding-bottom:56.25%; 
     position:relative;
@@ -17,12 +17,31 @@ body {
     position:absolute;
    } */
 
+.accueil {
+    text-align: center;
+    padding-left: 10px;
+}
+
+.question {
+    text-align: right;
+}
+
+.a {
+    text-align: right;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}
+
 .container {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
-    margin-right: auto;
-    margin-left: left;
+    text-align: left;
+    margin-left: auto;
 }
 
 .nav {

@@ -1,0 +1,7 @@
+container = va permettre d'aligner au centre le div
+d-flex 
+flex-column + text-center = permet d'aligner le texte au centre
+bg-success : fond (en vert là)
+my-2 = ecart au dessus
+mb-5 = ecart en dessous
+rounded (bord rond)
