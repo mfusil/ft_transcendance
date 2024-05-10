@@ -45,6 +45,21 @@ const paddleDepth = 10;
 
         // Positionnement de la caméra
         camera.position.z = 200;
+        
+        // Création de la géométrie de la ligne en pointillés
+        const lineGeometry = new THREE.PlaneGeometry(1, 180); // Création d'une surface fine pour la ligne
+
+        // Création du matériau pour la ligne en pointillés
+        const lineMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 1 });
+
+        // Création de la ligne en pointillés
+        const line = new THREE.Mesh(lineGeometry, lineMaterial);
+
+        // Positionnement de la ligne au milieu de la surface de jeu
+        line.position.x = 0;
+
+        // Ajout de la ligne à la scène
+        scene.add(line);
 
         // Création des bordures extérieures du terrain
         const borderGeometry = new THREE.BoxGeometry(420, 188, 10);
