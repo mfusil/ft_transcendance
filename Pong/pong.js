@@ -16,7 +16,7 @@ const paddleGeometry = new THREE.BoxGeometry(paddleWidth, paddleHeight, paddleDe
 const paddleMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
 const playerPaddle = new THREE.Mesh(paddleGeometry, paddleMaterial);
 const computerPaddle = new THREE.Mesh(paddleGeometry, paddleMaterial);
-const ballGeometry = new THREE.SphereGeometry(5, 32, 32);
+const ballGeometry = new THREE.SphereGeometry(7, 40, 40);
 const ballMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
 const ball = new THREE.Mesh(ballGeometry, ballMaterial);
 
@@ -25,11 +25,11 @@ let ballSpeedX = 2;
 let ballSpeedY = 2;
 const acceleration = 1;
 // Variables de vitesse maximale de la balle
-const maxSpeedX = 5;
-const maxSpeedY = 5;
+const maxSpeedX = 6;
+const maxSpeedY = 6;
 
 // Variables de mouvement des raquettes
-let playerPaddleSpeed = 0.2;
+let playerPaddleSpeed = 0;
 let computerPaddleSpeed = 0;
 
 // Variables de score
@@ -209,8 +209,8 @@ const animate = function () {
     renderer.render(scene, camera);
 
     // Mise à jour de l'affichage des scores
-    document.getElementById('playerScore').innerText = 'Player: ' + playerScore;
-    document.getElementById('computerScore').innerText = 'Computer: ' + computerScore;
+    document.getElementById('playerScore').innerText = 'Player 1: ' + playerScore;
+    document.getElementById('computerScore').innerText = 'Player 2: ' + computerScore;
 
     // Vérification du gagnant
     if (playerScore >= 10) {
